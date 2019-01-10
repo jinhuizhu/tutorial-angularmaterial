@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
   MatButtonModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatIconModule
 } from "@angular/material";
 
 /**
@@ -12,12 +13,14 @@ import {
   imports: [
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule
   ],
   exports: [
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatIconModule
   ]
 })
 export class MaterialModule { }

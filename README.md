@@ -4,6 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Angular Material Setup
 
+* `npm install --save @angular/material @angular/cdk @angular/animations`
+* create a shared material module
+* include a theme in style.css
+* gesture support: `npm install --save hammerjs`
+* add material icons: ``
 
 
 ## Development server
