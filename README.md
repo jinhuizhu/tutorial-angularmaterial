@@ -8,7 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * create a shared material module
 * include a theme in style.css
 * gesture support: `npm install --save hammerjs`
-* add material icons: ``
+* add material icons: add link in index.html
+* change to use scss: `ng config schematics.@schematics/angular:component.styleext scss`, and change all css to scss
 
 
 ## Development server
