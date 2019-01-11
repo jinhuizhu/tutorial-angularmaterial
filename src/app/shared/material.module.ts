@@ -40,8 +40,9 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+
 /**
- * Angular Material modules
+ * Angular Material Modules
  */
 @NgModule({
   exports: [
