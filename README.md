@@ -10,6 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * gesture support: `npm install --save hammerjs`
 * add material icons: add link in index.html
 * change to use scss: `ng config schematics.@schematics/angular:component.styleext scss`, and change all css to scss
+* install flex layout: `npm install --save @angular/flex-layout`
 
 
 ## Angular cmds
