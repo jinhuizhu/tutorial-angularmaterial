@@ -15,7 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Angular cmds
 
-    `ng new my-app`  create a new application "my-app"
+    `ng new my-app`  create a new application "my-app" note that "_" in the name will cause error.
     
     `ng s --open` start local server and monitoring changes
     
@@ -29,13 +29,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     
     `--dry-run` try the command but don't generate actual files
     
-    `--flat` no additional folder structure
+    `--flat` no additional nested folder structure
     
     `--no-spec` no spec file
     
     `--inline-style` no separate style file
     
     `--inline-template` no separate html template file
+    
+    `ng update --all` update all angular related modules
 
 ## Development server
 
