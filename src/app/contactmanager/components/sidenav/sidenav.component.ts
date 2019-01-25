@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {Observable} from "rxjs";
 import {User} from "../../models/user";
 import {Router} from "@angular/router";
+import {MatSidenav} from "@angular/material";
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -18,15 +19,19 @@ export class SidenavComponent implements OnInit {
   // declare an observable so that our template can bind to it:
   users: Observable<User[]>;
 
+  // sidenav referrs to the following in the template file:
+  // <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
+  @ViewChild(MatSidenav) sidenav: MatSidenav;
+
   constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.users = this.userService.users;
     this.userService.loadAll();
 
-    this.users.subscribe( data => {
-      if (data.length > 0) {
-        this.router.navigate(['/contactmanager', data[0].id]);
+    this.router.events.subscribe( () => {
+      if (this.isScreenSmall()) {
+        this.sidenav.close();
       }
     });
   }
