@@ -19,6 +19,9 @@ export class NotesComponent implements OnInit {
   ngOnInit() {
     this.dataSource = new MatTableDataSource<Note>(this.notes);
     this.dataSource.paginator = this.paginator;
+  }
 
+  applyFilter (filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
