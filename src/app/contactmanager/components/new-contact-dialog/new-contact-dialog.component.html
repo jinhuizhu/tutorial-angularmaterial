@@ -15,7 +15,8 @@
 
     <!--Name-->
     <mat-form-field>
-      <input matInput placeholder="Name" [(ngModel)]="user.name" required>
+      <input matInput placeholder="Name" [formControl]="name" [(ngModel)]="user.name" required>
+      <mat-error *ngIf="name.invalid"> {{getErrorMsg()}}</mat-error>
     </mat-form-field>
 
     <!--Bio-->
