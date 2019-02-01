@@ -9,6 +9,9 @@ import {User} from "../../models/user";
 })
 export class NewContactDialogComponent implements OnInit {
 
+  avatars = [
+    'svg-1', 'svg-2', 'svg-3', 'svg-4'
+  ];
   user: User;
 
   constructor(private dialogRef: MatDialogRef<NewContactDialogComponent>) { }
