@@ -18,6 +18,7 @@ export class SidenavComponent implements OnInit {
 
   // declare an observable so that our template can bind to it:
   users: Observable<User[]>;
+  isDarkTheme: boolean = false;
 
   // sidenav referrs to the following in the template file:
   // <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
@@ -40,4 +41,8 @@ export class SidenavComponent implements OnInit {
     return this.mediaMatcher.matches;
   }
 
+  toggleTheme() {
+    console.log(this.isDarkTheme);
+    this.isDarkTheme = !this.isDarkTheme;
+  }
 }
