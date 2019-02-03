@@ -19,6 +19,7 @@ export class SidenavComponent implements OnInit {
   // declare an observable so that our template can bind to it:
   users: Observable<User[]>;
   isDarkTheme: boolean = false;
+  dir:string = "ltr";
 
   // sidenav referrs to the following in the template file:
   // <mat-sidenav #sidenav class="app-sidenav mat-elevation-z10"
@@ -42,7 +43,10 @@ export class SidenavComponent implements OnInit {
   }
 
   toggleTheme() {
-    console.log(this.isDarkTheme);
     this.isDarkTheme = !this.isDarkTheme;
+  }
+
+  toggleDirection() {
+    this.dir = this.dir === 'ltr' ? 'rtl' : 'lrt';
   }
 }
